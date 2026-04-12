@@ -72,6 +72,8 @@ function criarInimigos() {
 
     document.getElementById('lista-inimigos').appendChild(card);
     document.getElementById('form-inimigo').style.display = 'none';
+        ['inp-nome-ini', 'inp-raca', 'inp-arma-ini', 'inp-dano-ini', 'inp-vida-ini', 'inp-mana-ini', 'inp-vigor-ini']
+    .forEach(id => document.getElementById(id).value = '');
 }
 
 function criarPersonagem() {
@@ -114,4 +116,6 @@ function criarPersonagem() {
 
     document.getElementById('lista-personagens').appendChild(card);
     document.getElementById('form-personagem').style.display = 'none';
+    ['inp-nome', 'inp-prof', 'inp-arma', 'inp-dano', 'inp-vida', 'inp-mana', 'inp-vigor']
+    .forEach(id => document.getElementById(id).value = '');
 }

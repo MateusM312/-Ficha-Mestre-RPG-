@@ -1,4 +1,15 @@
 
+// Corrigido: setInterval (não setIntervalPersonagem/setIntervalInimigo)
+setInterval(() => {
+    const quantidade = document.querySelectorAll('.card-personagem').length;
+    document.getElementById('contador-jogadores').textContent = quantidade;
+}, 500);
+
+setInterval(() => {
+    const quantidade = document.querySelectorAll('.card-inimigo').length;
+    document.getElementById('contador-inimigo').textContent = quantidade;
+}, 500);
+
 
 function editar(elemento){
     const valorAtual = elemento.textContent;

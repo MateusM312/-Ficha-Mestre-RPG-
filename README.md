@@ -29,6 +29,7 @@ Sistema web simples para gerenciamento de campanhas de RPG, permitindo criar e v
 
 
 🚀 Funcionalidades
+
 ✅ Criar personagens com:
 Nome
 Profissão
@@ -44,10 +45,13 @@ Dano
 Atributos (Vida, Mana, Vigor)
 
 ✅ Exibição em formato de cards estilizados
+
 ✅ Barras visuais para atributos
+
 ✅ Interface moderna com tema RPG 🎮
 
 🛠️ Tecnologias utilizadas
+
 HTML5
 CSS3
 JavaScript (Vanilla)

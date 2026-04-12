@@ -63,7 +63,10 @@ function criarInimigos() {
                 <p class="card-nome">${nome}</p>
                 <p class="card-raca">${raca}</p>
             </div>
-            <span class="card-arma">${arma} · ${dano} dano</span>
+            <div class="arma-delete">
+                <span class="card-arma">${arma} · ${dano} dano</span>
+                <i class="fa-solid fa-circle-minus" id="deletefont" onclick="deletar(this)"></i>
+            </div>
         </div>
         <div class="card-barras">
             <div class="barra-item">
@@ -107,7 +110,10 @@ function criarPersonagem() {
                 <p class="card-nome">${nome}</p>
                 <p class="card-prof">${prof}</p>
             </div>
-            <span class="card-arma">${arma} · ${dano} dano</span>
+            <div class="arma-delete">
+                <span class="card-arma">${arma} · ${dano} dano</span>
+                <i class="fa-solid fa-circle-minus" id="deletefont" onclick="deletar(this)"></i>
+            </div>
         </div>
         <div class="card-barras">
             <div class="barra-item">
@@ -129,4 +135,10 @@ function criarPersonagem() {
     document.getElementById('form-personagem').style.display = 'none';
     ['inp-nome', 'inp-prof', 'inp-arma', 'inp-dano', 'inp-vida', 'inp-mana', 'inp-vigor']
     .forEach(id => document.getElementById(id).value = '');
+}
+
+
+function deletar(botao) {
+    const card = botao.closest('.card-personagem, .card-inimigo');
+    card.remove();
 }

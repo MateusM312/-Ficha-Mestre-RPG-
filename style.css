@@ -243,3 +243,14 @@ h6{
 .vida  { background: #4fd1c5; }
 .mana  { background: #9f7aea; }
 .vigor { background: #f6ad55; }
+
+.arma-delete{
+    display: flex;
+    margin-left: 5rem;
+}
+
+#deletefont {
+    padding-left: 16px;
+    color: #ed6363;
+    cursor: pointer; /* <- adiciona essa linha */
+}

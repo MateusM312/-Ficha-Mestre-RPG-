@@ -13,6 +13,15 @@
     
 </head>
 <body>
+    <div class="theme">
+        <div class="icon-button">
+            <i class="fa-solid fa-palette"></i> <button onclick="dropdown()" class="dropdownbnt">Themes</button>
+        </div>
+        <div id="myDropdown" class="dropdown-content">
+            <button class="drop-options">Default</button>
+            <button class="drop-options">Alulu</button>
+        </div>
+    </div>
     <div class="all">
         <div class="titulo">
             <h1>🎲 Ficha Mestre RPG 🎲</h1>
@@ -23,11 +32,11 @@
                 <p class="nome-campanha" onclick="editar(this)">A Maldição de Krath</p>
             </div>
             <div class="players">
-                <h6>Jogadores</h6>
+                <h6 class="titulos-head">Jogadores</h6>
                 <p class="nome-campanha"><span id="contador-jogadores">0</span></p>
             </div>
             <div class="enemys-actives">
-                <h6>Inimigos ativos</h6>
+                <h6 class="titulos-head">Inimigos ativos</h6>
                 <p class="nome-campanha"><span id="contador-inimigo">0</span></p>
             </div>
         </div>

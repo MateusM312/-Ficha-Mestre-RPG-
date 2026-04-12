@@ -137,8 +137,26 @@ function criarPersonagem() {
     .forEach(id => document.getElementById(id).value = '');
 }
 
-
+// Deleta Inimigo/Personagem
 function deletar(botao) {
     const card = botao.closest('.card-personagem, .card-inimigo');
     card.remove();
+}
+
+function dropdown(){
+    document.getElementById("myDropdown").classList.toggle("show");
+    event.stopPropagation(); // <- impede o clique de propagar para o window
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropdownbnt')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
 }

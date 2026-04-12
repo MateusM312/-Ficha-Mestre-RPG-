@@ -1,0 +1,245 @@
+body{
+    background: linear-gradient(135deg, #0d1b2a, #1a2d4a, #0f2340);
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    font-family: 'Cinzel', serif;
+    color: #f0f4f8;
+}
+
+p{
+    color: #a0aec0;
+}
+
+input {
+    background: rgba(255,255,255,0.08);
+    border: 0.5px solid rgba(99,179,237,0.4);
+    border-radius: 8px;
+    padding: 4px 3px;
+    color: #f0f4f8;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    width: 100%;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input:focus {
+    outline: none;
+    border-color: #ed6363;
+    background: rgba(255,255,255,0.12);
+}
+
+button:hover{
+    background-color: rgba(11, 12, 70, 0.267);
+}
+
+button{
+    background-color: rgba(245, 245, 220, 0);
+    transition: background-color 0.3s ease;
+}
+
+.header-up-box{
+    display: flex;
+    gap: 16px;
+}
+
+.campanha, .players, .enemys-actives{
+    background-color: rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.add-per, .add-ini{
+    background-color: rgba(245, 245, 220, 0);
+    color: #f0f4f8;
+    border: solid rgba(255,255,255,0.12) 2px;
+    border-radius: 14px;
+    padding: 5px;
+    padding-right: 12px;
+}
+
+.personagem, .inimigos{
+    background-color: rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 15px;
+    margin: 15px;
+}
+
+h6{
+    display: flex;
+    justify-content: space-between;
+    align-items: top center;
+}
+
+
+.titulo{
+    display: flex;
+    justify-content: center;   
+}
+
+.card-personagem {
+    background: rgba(255,255,255,0.06);
+    border: 0.5px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    animation: fadeIn 0.3s ease;
+}
+
+
+
+#form-personagem input{
+    display: flex;
+    margin: 6px;
+    max-width: 22.5rem;
+}
+
+#form-personagem button {
+    display: flex;
+    margin: auto;
+    grid-column: 1 / -1;
+    padding: 8px;
+    margin-top: 4px;
+    background-color: rgba(245, 245, 220, 0);
+    transition: background-color 0.3s ease;
+    border: solid rgba(255,255,255,0.12) 2px;
+    border-radius: 14px;
+    padding: 5px;
+    padding-right: 6px;
+    color: white;
+    text-align: center;
+}
+
+#form-personagem button:hover{
+    display: flex;
+    margin: auto;
+    grid-column: 1 / -1;
+    padding: 8px;
+    margin-top: 4px;
+    background-color: rgba(29, 28, 83, 0.384);
+    transition: background-color 0.3s ease;
+    border: solid rgba(255,255,255,0.12) 2px;
+    border-radius: 14px;
+    padding: 5px;
+    padding-right: 6px;
+    color: white;
+    text-align: center;
+}
+
+.card-topo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.card-inimigo {
+    background: rgba(255,255,255,0.06);
+    border: 0.5px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-top: 8px;
+    animation: fadeIn 0.3s ease;
+}
+
+#form-inimigo input{
+    display: flex;
+    margin: 6px;
+    max-width: 22.5rem;
+}
+
+#form-inimigo button {
+    display: flex;
+    margin: auto;
+    grid-column: 1 / -1;
+    padding: 8px;
+    margin-top: 4px;
+    background-color: rgba(245, 245, 220, 0);
+    transition: background-color 0.3s ease;
+    border: solid rgba(255,255,255,0.12) 2px;
+    border-radius: 14px;
+    padding: 5px;
+    padding-right: 6px;
+    color: white;
+    text-align: center;
+}   
+
+.avatar-inimigo{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(237, 99, 99, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 13px;
+    color: #ed6363;    
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(99,179,237,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 13px;
+    color: #63b3ed;
+}
+
+.card-nome { margin: 0; font-weight: 500; font-size: 14px; }
+.card-prof { margin: 0; font-size: 12px; color: #a0aec0; }
+
+.card-raca{margin: 0; font-size: 12px; color: #a0aec0;}
+
+.card-arma {
+    margin-left: auto;
+    font-size: 11px;
+    background: rgba(79,209,197,0.15);
+    color: #4fd1c5;
+    padding: 2px 8px;
+    border-radius: 99px;
+}
+
+.card-barras { display: flex; gap: 16px; }
+
+.barra-item p { font-size: 11px; color: #a0aec0; margin: 0 0 3px; }
+
+.barra-bg {
+    height: 4px;
+    width: 80px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 2px;
+}
+
+.barra-fill { height: 4px; border-radius: 2px; }
+.vida  { background: #4fd1c5; }
+.mana  { background: #9f7aea; }
+.vigor { background: #f6ad55; }

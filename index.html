@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎲 Ficha Mestre RPG</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="all">
+        <div class="titulo">
+            <h1>🎲 Ficha Mestre RPG 🎲</h1>
+        </div>
+        <div class="header-up-box">
+            <div class="campanha">
+                <h6>Campanha</h6>
+                <p class="nome-campanha" onclick="editar(this)">A Maldição de Krath</p>
+            </div>
+            <div class="players">
+                <h6>Jogadores</h6>
+                <p class="nome-campanha" onclick="editar(this)">4</p>
+            </div>
+            <div class="enemys-actives">
+                <h6>Inimigos ativos</h6>
+                <p class="nome-campanha" onclick="editar(this)">2</p>
+            </div>
+        </div>
+        <div>
+            <div class="personagem">
+                <h6 class="perbut">Personagens <button class="add-per" onclick="abrirForm()">+ Adicionar</button></h6>
+                <div id="form-personagem" style="display: none;">
+                    <input id="inp-nome" placeholder="Nome" />
+                    <input id="inp-prof" placeholder="Profissão" />
+                    <input id="inp-arma" placeholder="Arma" />
+                    <input id="inp-dano" placeholder="Dano" type="number" />
+                    <input id="inp-vida" placeholder="Vida (0-100)" type="number" />
+                    <input id="inp-mana" placeholder="Mana (0-100)" type="number" />
+                    <input id="inp-vigor" placeholder="Vigor (0-100)" type="number" />
+                    <button onclick="criarPersonagem()">Confirmar</button>
+                </div>
+                <div id="lista-personagens"></div>
+            </div>
+            <div class="inimigos">
+                <h6>Inimigos <button class="add-ini" onclick="abrirFormInimigo()">+ Adicionar</button></h6>
+                <div id="form-inimigo" style="display: none;">
+                    <input id="inp-nome-ini" placeholder="Nome" />
+                    <input id="inp-raca" placeholder="Raça" />
+                    <input id="inp-arma-ini" placeholder="Arma" />
+                    <input id="inp-dano-ini" placeholder="Dano" type="number" />
+                    <input id="inp-vida-ini" placeholder="Vida (0-100)" type="number" />
+                    <input id="inp-mana-ini" placeholder="Mana (0-100)" type="number" />
+                    <input id="inp-vigor-ini" placeholder="Vigor (0-100)" type="number" />
+                    <button onclick="criarInimigos()">Confirmar</button>
+                </div>
+                <div id="lista-inimigos"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

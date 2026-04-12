@@ -7,6 +7,27 @@ Sistema web simples para gerenciamento de campanhas de RPG, permitindo criar e v
 <img width="1365" height="672" alt="image" src="https://github.com/user-attachments/assets/a4aceb05-d976-4b7e-8b15-269bedd6d265" />
 <img width="1365" height="676" alt="image" src="https://github.com/user-attachments/assets/925bd2de-4bf1-46e2-8d35-a0bea516450c" />
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 🚀 Funcionalidades
 ✅ Criar personagens com:
 Nome
@@ -14,19 +35,23 @@ Profissão
 Arma
 Dano
 Vida, Mana e Vigor
+
 ✅ Criar inimigos com:
 Nome
 Raça
 Arma
 Dano
 Atributos (Vida, Mana, Vigor)
+
 ✅ Exibição em formato de cards estilizados
 ✅ Barras visuais para atributos
 ✅ Interface moderna com tema RPG 🎮
+
 🛠️ Tecnologias utilizadas
 HTML5
 CSS3
 JavaScript (Vanilla)
+
 🎯 Objetivo do projeto
 
 Esse projeto foi desenvolvido com o objetivo de:

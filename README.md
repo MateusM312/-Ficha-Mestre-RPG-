@@ -3,8 +3,9 @@
 Sistema web simples para gerenciamento de campanhas de RPG, permitindo criar e visualizar personagens e inimigos de forma dinâmica.
 
 📸 Preview
-<img width="1365" height="680" alt="image" src="https://github.com/user-attachments/assets/cadab7e8-cc53-4f67-8da0-bee1fb51cf05" />
-<img width="1365" height="767" alt="image" src="https://github.com/user-attachments/assets/1612cbb2-c311-42ae-bcb3-885a4c498af6" />
+<img width="1365" height="675" alt="image" src="https://github.com/user-attachments/assets/d675a221-bff6-4653-9a49-301635cfeacf" />
+<img width="1365" height="672" alt="image" src="https://github.com/user-attachments/assets/a4aceb05-d976-4b7e-8b15-269bedd6d265" />
+<img width="1365" height="676" alt="image" src="https://github.com/user-attachments/assets/925bd2de-4bf1-46e2-8d35-a0bea516450c" />
 
 🚀 Funcionalidades
 ✅ Criar personagens com:

@@ -65,6 +65,7 @@ button{
 .header-up-box{
     display: flex;
     gap: 16px;
+    justify-content: center;
 }
 
 .campanha, .players, .enemys-actives{

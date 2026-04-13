@@ -90,6 +90,7 @@ function criarInimigos() {
     .forEach(id => document.getElementById(id).value = '');
 }
 
+
 function criarPersonagem() {
     const nome  = document.getElementById('inp-nome').value || 'Sem nome';
     const prof  = document.getElementById('inp-prof').value || 'Sem profissão';
@@ -128,6 +129,9 @@ function criarPersonagem() {
                 <p>Vigor</p>
                 <div class="barra-bg"><div class="barra-fill vigor" style="width:${vigor}%"></div></div>
             </div>
+            <div class="edit-atributes">
+                <i class="fa-solid fa-pen-to-square" id="statusfont" onclick="abrirStatus(this)"></i>
+            </div>
         </div>
     `;
 
@@ -159,4 +163,16 @@ window.onclick = function(event) {
       }
     }
   }
+}
+
+document.getElementById('tema-default').onclick = () => {
+    document.body.className = '';
+}
+
+document.getElementById('tema-Alulu').onclick = () => {
+    document.body.className = 'tema-alulu';
+}
+
+document.getElementById('tema-Green').onclick = () => {
+    document.body.className = 'tema-green';
 }

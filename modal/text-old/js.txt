@@ -1,0 +1,80 @@
+// =============================================
+// MODAL DE STATUS DO PERSONAGEM
+// =============================================
+
+// Abre o modal de status preenchendo com os dados do card
+function abrirStatus(botao) {
+    const card = botao.closest('.card-personagem, .card-inimigo');
+    const isInimigo = card.classList.contains('card-inimigo');
+
+    const nome  = card.querySelector('.card-nome').textContent;
+    const sub   = card.querySelector(isInimigo ? '.card-raca' : '.card-prof').textContent;
+    const armaSpan = card.querySelector('.card-arma').textContent; // ex: "Martelo · 43 dano"
+    const iniciais = card.querySelector('.avatar, .avatar-inimigo').textContent;
+
+    const modal = document.getElementById('modal-status');
+    modal.style.display = 'flex';
+    modal.dataset.tipo = isInimigo ? 'inimigo' : 'personagem';
+
+    document.getElementById('modal-iniciais').textContent = iniciais;
+    document.getElementById('modal-iniciais').className = isInimigo ? 'modal-avatar inimigo' : 'modal-avatar';
+    document.getElementById('modal-nome').textContent = nome;
+    document.getElementById('modal-sub').textContent = sub;
+
+    // Limpa listas modulares ao abrir
+    document.getElementById('lista-habilidades-modal').innerHTML = '';
+    document.getElementById('lista-armas-modal').innerHTML = '';
+
+    // Habilidades padrão (inspiradas na ficha)
+    const habilidadesPadrao = [
+        { nome: 'Furtividade', pct: 10 },
+        { nome: 'Percepção',   pct: 15 },
+        { nome: 'Persuasão',   pct: 15 },
+        { nome: 'Medicina',    pct: 5  },
+    ];
+    habilidadesPadrao.forEach(h => adicionarHabilidade(h.nome, h.pct));
+
+    // Arma padrão do card
+    const partes = armaSpan.split('·');
+    const nomeArma = partes[0].trim();
+    const danoArma = partes[1] ? partes[1].replace('dano','').trim() : '0';
+    adicionarArma(nomeArma, danoArma);
+}
+
+function fecharModal() {
+    document.getElementById('modal-status').style.display = 'none';
+}
+
+// Fecha ao clicar fora do painel
+document.getElementById('modal-status').addEventListener('click', function(e) {
+    if (e.target === this) fecharModal();
+});
+
+// ---- HABILIDADES ----
+
+function adicionarHabilidade(nome = '', pct = 0) {
+    const lista = document.getElementById('lista-habilidades-modal');
+    const item = document.createElement('div');
+    item.className = 'modal-hab-item';
+    item.innerHTML = `
+        <input type="checkbox" class="hab-check">
+        <input type="text"   class="hab-nome" value="${nome}" placeholder="Habilidade">
+        <input type="number" class="hab-pct"  value="${pct}"  placeholder="%"> <span class="hab-pct-label">%</span>
+        <i class="fa-solid fa-circle-minus hab-del" onclick="this.closest('.modal-hab-item').remove()"></i>
+    `;
+    lista.appendChild(item);
+}
+
+// ---- ARMAS ----
+
+function adicionarArma(nome = '', dano = '') {
+    const lista = document.getElementById('lista-armas-modal');
+    const item = document.createElement('div');
+    item.className = 'modal-arma-item';
+    item.innerHTML = `
+        <input type="text"   class="arma-nome" value="${nome}"  placeholder="Arma">
+        <input type="text"   class="arma-dano" value="${dano}"  placeholder="Dano">
+        <i class="fa-solid fa-circle-minus arma-del" onclick="this.closest('.modal-arma-item').remove()"></i>
+    `;
+    lista.appendChild(item);
+}

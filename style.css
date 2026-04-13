@@ -1,10 +1,53 @@
+:root {
+    --bg: linear-gradient(135deg, #0d1b2a, #1a2d4a, #0f2340);
+    --card-bg: rgba(255,255,255,0.06);
+    --card-border: rgba(255,255,255,0.1);
+    --text-primary: #f0f4f8;
+    --text-secondary: #a0aec0;
+    --accent: #63b3ed;
+    --accent-bg: rgba(99,179,237,0.2);
+    --enemy-accent: #ed6363;
+    --enemy-accent-bg: rgba(237,99,99,0.2);
+    --input-border: rgba(99,179,237,0.4);
+    --icon-border: rgba(255,255,255,1);
+}
+
+.tema-alulu {
+    --bg: linear-gradient(135deg, #080821, #0B0B32, #0F0F43);
+}
+
+.tema-green{
+    --bg: linear-gradient(135deg, #214E34 , #30734C, #429E69);
+}
+
 body{
-    background: linear-gradient(135deg, #0d1b2a, #1a2d4a, #0f2340);
+    background: var(--bg);
     min-height: 100vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.card-barras {
+    display: flex;
+    gap: 16px;
+    align-items: center;  /* <- adiciona isso */
+}
+
+.edit-atributes {
+    margin-left: auto;    /* <- empurra pro lado direito */
+}
+
+#statusfont {
+    color: #63b3ed;
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+#statusfont:hover {
+    color: #a0aec0;
 }
 
 body {

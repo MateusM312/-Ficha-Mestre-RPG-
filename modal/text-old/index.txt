@@ -1,0 +1,59 @@
+<!-- =============================================
+   PASSO 1: Cole isso ANTES do </body> no index.html
+   ============================================= -->
+
+<!-- Modal de Status -->
+<div id="modal-status">
+    <div class="modal-painel">
+        <div class="modal-header">
+            <div class="modal-avatar" id="modal-iniciais">TH</div>
+            <div class="modal-info-nome">
+                <h3 id="modal-nome">Nome</h3>
+                <p  id="modal-sub">Profissão</p>
+            </div>
+            <button class="modal-fechar" onclick="fecharModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <!-- Habilidades -->
+        <div class="modal-secao">
+            <div class="modal-secao-titulo">
+                <h4>Habilidades</h4>
+                <button class="modal-add-btn" onclick="adicionarHabilidade()">+ Adicionar</button>
+            </div>
+            <div id="lista-habilidades-modal"></div>
+        </div>
+
+        <!-- Armas -->
+        <div class="modal-secao">
+            <div class="modal-secao-titulo">
+                <h4>Armas</h4>
+                <button class="modal-add-btn" onclick="adicionarArma()">+ Adicionar</button>
+            </div>
+            <div id="lista-armas-modal"></div>
+        </div>
+    </div>
+</div>
+
+<!-- =============================================
+   PASSO 2: Adicione o link no <head>:
+   <link rel="stylesheet" href="modal-status.css">
+
+   PASSO 3: Adicione antes do </body>:
+   <script src="modal-status.js"></script>
+   (deixe DEPOIS do script.js)
+
+   PASSO 4: No script.js, nas funções criarPersonagem()
+   e criarInimigos(), dentro do card.innerHTML, adicione
+   o ícone de status no .card-topo:
+
+   <i class="fa-solid fa-scroll" id="statusfont" onclick="abrirStatus(this)" title="Ver status"></i>
+
+   Coloque ao lado do botão de delete na .arma-delete:
+   <div class="arma-delete">
+       <span class="card-arma">${arma} · ${dano} dano</span>
+       <i class="fa-solid fa-scroll" id="statusfont" onclick="abrirStatus(this)" title="Status"></i>
+       <i class="fa-solid fa-circle-minus" id="deletefont" onclick="deletar(this)"></i>
+   </div>
+   ============================================= -->

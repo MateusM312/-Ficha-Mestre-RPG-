@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linkagens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="modal-style.css">
+    <title>Modal</title>
+</head>
+<body>
+    <div class="principal">
+        <div class="painel">
+            <div class="close">
+                <i class="fa-regular fa-circle-xmark" id="close-button"></i>
+            </div>
+            <div class="painel-avatar-info">
+                <div class="avatar">
+                    <p class="inicias-mudar">SN</p>
+                </div>
+                <div class="info">
+                    <p onclick="editar(this)" id="player-nome">SEM NOME</p>
+                    <p onclick="editar(this)">Nome do jogador</p>
+                    <div class="personal">
+                        <div class="perso-campo">
+                            <p>Idade</p>
+                            <input type="number" placeholder="0" min="0" max="999">
+                        </div>
+                        <div class="perso-campo">
+                            <p>Sexo</p>
+                            <input type="text" placeholder="M/F">
+                        </div>
+                        <div class="perso-campo-prof">
+                            <p>Profissão</p>
+                            <input type="text" placeholder="...">
+                        </div>
+                        <div class="perso-campo">
+                            <p>Vida</p>
+                            <input type="number" placeholder="0" min="0" max="100">
+                        </div>
+                        <div class="perso-campo">
+                            <p>Vigor</p>
+                            <input type="number" placeholder="0" min="0" max="100">
+                        </div>
+                        <div class="perso-campo">
+                            <p>Mana</p>
+                            <input type="number" placeholder="0" min="0" max="100">
+                        </div>
+                        <div class="perso-campo">
+                            <p>Sanidade</p>
+                            <input type="number" placeholder="0" min="0" max="100">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <hr>
+            <div class="habilidades">
+                <h3>Habilidades</h3>
+                <div class="add-habilidades">
+                    <!-- add a habilidade modalmente -->
+                     <button class="addbtn">+ Adicionar</button>
+                </div>
+            </div>
+            <hr>
+            <div class="armas">
+                <h3>Armas</h3>
+                <div class="add-armas">
+                    <!-- add armas -->
+                     <button class="addbtn">+ Adicionar</button>
+                </div>
+            </div>
+            <hr>
+           <div class="item">
+            <h3>Itens</h3>
+            <div class="add-itens">
+                <!-- add itens -->
+                 <button class="addbtn">+ Adicionar</button>
+            </div>
+           </div> 
+        </div>
+    </div>
+</body>
+<!-- Scripts -->
+ <script src="modal.js"></script>
+
+</html>

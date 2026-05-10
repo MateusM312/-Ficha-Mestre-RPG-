@@ -1,14 +1,18 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
 }
 
 body{
+    margin: 0;
     background-color: #0a0e14;
 }
 
 /* -------------------- HEADER RELATED -------------------- */
 
 header{
+    background-color: transparent;
+    backdrop-filter: blur(20px);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -116,4 +120,47 @@ button{
     padding: 3%;
     border: 1px solid #274a47;
     border-radius: 12px;
+}
+
+/* -------------------- Descrição/Header2 -------------------- */
+
+.description{
+    display: flex;
+    margin: 0;
+    padding: 11% 0;
+    width: 100%;
+    justify-content: center;
+    gap: 182px;   
+}
+
+.description h1{
+    color: #448E7B;
+}
+
+.desc-inv h4{
+    color: #677580;
+}
+
+.button-add{
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.button-add button{
+    cursor: pointer;
+}
+
+.desc-inv{
+    color: white;
+    margin: 0;
+    height: fit-content;
+    padding: 0;
+}
+
+.body-mod{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
 }

@@ -4,36 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Call of Cthulhu</title>
-    <link rel="stylesheet" href="./styles/style.css">
-    <link rel="shortcut icon" href="/images/caveira-e-ossos.png" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/inimigos-style.css">
+    <link rel="shortcut icon" href="/images/caveira-e-ossos-red.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
-<body>  
+<body>
     <header>
         <div class="logo-comp">
-            <div class="logo"><img src="./images/caveira-e-ossos.png" alt=""></div>
+            <div class="logo"><img src="../images/caveira-e-ossos-red.png" alt=""></div>
             <div>
                 <h1>Call of Cthulhu</h1>
                 <h4>Keeper's Compedium</h4>
             </div>
         </div>
         <div class="buttons-switch">
-            <button class="selected"><i class="fa-solid fa-user-plus"></i>Investigadores</button>
-            <button onclick="window.location.href='./pages/Inimigo.html'" class="header-inactive"><i class="fa-solid fa-skull-crossbones"></i></i>Inimigos & Criaturas</button>
+            <button class="header-inactive" onclick="window.location.href='../index.html'"><i class="fa-solid fa-user-plus"></i>Investigadores</button>
+            <button class="selected"><i class="fa-solid fa-skull-crossbones"></i></i>Inimigos & Criaturas</button>
         </div>
     </header>
+
     <div class="body-mod">
         <div class="description">
             <div class="desc-inv">
-                <h1>Investigadores</h1>
-                <h4>Gerencie os corajosos que enfrentam o desconhecido</h4>
+                <h1>Inimigos & Criaturas</h1>
+                <h4>Gerencie os horrores que espreitam nas sombras</h4>
             </div>
-            <div class="button-add"><button class="selected"><i class="fa-solid fa-book-open"></i> Novo Investigador</button></div>
+            <div class="button-add"><button class="selected"><i class="fa-solid fa-skull"></i> Nova Criatura</button></div>
         </div>
 
         <div class="grid">
 
         </div>
     </div>
+
 </body>
 </html>

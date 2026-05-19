@@ -1,0 +1,168 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+body{
+    margin: 0;
+    background-color: #140a0a;
+}
+
+
+/* -------------------- HEADER RELATED -------------------- */
+
+header{
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 100px;
+    border-bottom: 1px solid #301a1a;
+    margin: 0;
+    left: 0;
+    background-color: #1e1010;
+}
+
+.buttons-switch{
+    display: flex;
+    margin-right: 5%;
+    gap: 4%;
+}
+
+.header-inactive:hover{
+    background-color: #1e1310;
+    color: #B3BDC3;
+}
+.header-inactive{
+    cursor: pointer;
+    background-color: #231515;
+    border: none;
+    color: #6d7c85;
+    padding: .7rem 1rem;
+    white-space: nowrap;
+    gap: 0.5rem;
+    font-size: 18px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+
+button{
+    background-color: #9d4a4a;
+    border: none;
+    color: black;
+    padding: .7rem 1rem;
+    white-space: nowrap;
+    gap: 0.5rem;
+    font-size: 18px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.selected:hover{
+    background-color: #8e4444;
+    color: #0A0E14;
+}
+.selected{
+    background-color: #9d4a4a;
+    border: none;
+    color: black;
+    padding: .7rem 1rem;
+    white-space: nowrap;
+    gap: 0.5rem;
+    font-size: 18px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.logo-comp{
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+    color: white;
+    width: 25%;
+}
+
+.logo-comp h1, h2, h3, h4{
+    margin: 0;
+}
+
+.logo-comp h1{
+    color: #994848;
+}
+
+.logo-comp h4{
+    color: #806767;
+    font-size: 12px;
+}
+
+.logo img{
+    width: 32px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5%;
+    background-color: #331c1c;
+    padding: 3%;
+    border: 1px solid #4a2727;
+    border-radius: 12px;
+}
+
+/* -------------------- Descrição/Header2 -------------------- */
+
+.description{
+    display: flex;
+    margin: 0;
+    padding: 11% 0;
+    width: 100%;
+    justify-content: center;
+    gap: 182px;   
+}
+
+.description h1{
+    color: #8e4444;
+}
+
+.desc-inv h4{
+    color: #806767;
+}
+
+.button-add{
+    display: flex;
+    height: fit-content;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.button-add button{
+    cursor: pointer;
+}
+
+.desc-inv{
+    color: white;
+    margin: 0;
+    height: fit-content;
+    padding: 0;
+}
+
+.body-mod{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}

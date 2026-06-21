@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Call of Cthulhu</title>
     <link rel="stylesheet" href="../styles/inimigos-style.css">
     <link rel="shortcut icon" href="/images/caveira-e-ossos-red.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+
 <body>
     <header>
         <div class="logo-comp">
@@ -19,20 +23,21 @@
             </div>
         </div>
         <div class="buttons-switch">
-            <button class="header-inactive" onclick="window.location.href='../index.html'"><i class="fa-solid fa-user-plus"></i>Investigadores</button>
+            <button class="header-inactive" onclick="window.location.href='../index.html'"><i
+                    class="fa-solid fa-user-plus"></i>Investigadores</button>
             <button class="selected"><i class="fa-solid fa-skull-crossbones"></i></i>Inimigos & Criaturas</button>
         </div>
     </header>
 
     <div class="background-add" id="modal" onclick="fecharForm()">
         <div class="add" onclick="event.stopPropagation()">
-            <h1><i class="fa-solid fa-book"></i> Novo Investigador</h1>
+            <h1><i class="fa-solid fa-book"></i> Nova Criatura</h1>
             <hr>
             <form action="post">
                 <div class="box">
                     <label>Nome</label>
-                    <input type="text" name="name" style="text-align: left;" id="iName" placeholder="Digite o nome do persoangem..."
-                        autocomplete="off">
+                    <input type="text" name="name" style="text-align: left;" id="iName"
+                        placeholder="Digite o nome da criatura..." autocomplete="off">
                 </div>
                 <br>
                 <div class="box">
@@ -41,8 +46,9 @@
                 </div>
                 <br>
                 <div class="ocupação-box">
-                    <label>Ocupação</label>
-                    <input style="text-align: left;" type="text" id="iocup" placeholder="Ex: Detetive, Professor, Médico, Jornalista...">
+                    <label>Tipo</label>
+                    <input style="text-align: left;" type="text" id="iocup"
+                        placeholder="Ex: Fantasma, Demônio, Troll, Zumbi...">
                 </div>
                 <br>
                 <h2>Características</h2>
@@ -114,12 +120,20 @@
                 <hr>
                 <div class="div-botão-pai">
                     <h2>Armas</h2>
-                    <button class="btn-adicionar" id="button-add-armamento" onclick="adicionarArmamento()">+ Adicionar Armamento</button>
+                    <button class="btn-adicionar" id="button-add-armamento" onclick="adicionarArmamento()">+ Adicionar
+                        Armamento</button>
                 </div>
                 <hr>
                 <div class="div-botão-mãe">
                     <h2>Inventário</h2>
-                    <button class="btn-adicionar" id="button-add-item" onclick="adicionarItem()">+ Adicionar Item</button>
+                    <button class="btn-adicionar" id="button-add-item" onclick="adicionarItem()">+ Adicionar
+                        Item</button>
+                </div>
+                <hr>
+                <div class="div-botão-filho">
+                    <h2>Habilidades Especiais</h2>
+                    <button class="btn-adicionar" id="button-add-item" onclick="adicionarItem()">+ Adicionar
+                        Habilidades</button>
                 </div>
                 <hr>
                 <div class="hist-box">
@@ -128,7 +142,8 @@
                 </div>
                 <br>
                 <div class="btn-group">
-                    <button type="button" class="selected" style="width: 600px;" onclick="criarPersonagem()">Criar Personagem</button>
+                    <button type="button" class="selected" style="width: 600px;" onclick="criarPersonagem()">Criar
+                        Personagem</button>
                     <br>
                     <button type="button" class="selected" onclick="fecharForm()">Voltar</button>
                 </div>
@@ -143,7 +158,8 @@
                 <h1>Inimigos & Criaturas</h1>
                 <h4>Gerencie os horrores que espreitam nas sombras</h4>
             </div>
-            <div class="button-add"><button class="selected" onclick="abrirForm()"><i class="fa-solid fa-skull" ></i> Nova Criatura</button></div>
+            <div class="button-add"><button class="selected" onclick="abrirForm()"><i class="fa-solid fa-skull"></i>
+                    Nova Criatura</button></div>
         </div>
 
         <div class="grid">
@@ -153,4 +169,5 @@
 
     <script src="../scripts/scriptInimigo.js"></script>
 </body>
+
 </html>

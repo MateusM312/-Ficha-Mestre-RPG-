@@ -416,6 +416,35 @@ textarea:focus {
   margin-bottom: 4px;
   display: block;
 }
+/* -------------------- BOTÃO DELETAR -------------------- */
+.card {
+    position: relative;
+}
+.btn-deletar {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background-color: #7a1e1e;
+    color: #ffaaaa;
+    border: none;
+    border-radius: 6px;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s, background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card:hover .btn-deletar {
+    opacity: 1;
+}
+.btn-deletar:hover {
+    background-color: #a02020 !important;
+    color: white !important;
+}
+
 /*---------------- Setinhas -------------*/
 /* Chrome, Safari, Edge */
 input[type="number"]::-webkit-inner-spin-button,

@@ -29,18 +29,18 @@ function criarPersonagem() {
     const int      = parseInt(document.getElementById("iTen").value) || 0;
     const pow      = parseInt(document.getElementById("iPower").value) || 0;
     const edu      = parseInt(document.getElementById("iEduc").value) || 0;
-    const sanAtual      = parseInt(document.getElementById("iSanAt").value) || 0;
-    const sanMax      = parseInt(document.getElementById("iSanMax").value) || 0;
-    const pvAtual      = parseInt(document.getElementById("iPvAt").value) || 0;
-    const pvMax      = parseInt(document.getElementById("iPvMax").value) || 0;
-    const pmAtual      = parseInt(document.getElementById("iPmAt").value) || 0;
-    const pmMax      = parseInt(document.getElementById("iPmMax").value) || 0;
+    const sanAtual = parseInt(document.getElementById("iSanAt").value) || 0;
+    const sanMax   = parseInt(document.getElementById("iSanMax").value) || 0;
+    const pvAtual  = parseInt(document.getElementById("iPvAt").value) || 0;
+    const pvMax    = parseInt(document.getElementById("iPvMax").value) || 0;
+    const pmAtual  = parseInt(document.getElementById("iPmAt").value) || 0;
+    const pmMax    = parseInt(document.getElementById("iPmMax").value) || 0;
 
     const HP  = Math.floor((con + siz) / 10);
     const SAN = pow * 5;
     const MP  = Math.floor(pow / 5);
 
-    const novoPersonagem = { nome, idade, ocupacao, str, con, siz, dex, app, int, pow, edu, HP, SAN, MP, sanAtual, sanMax, pvAtual, pvMax, pmAtual, pmMax};
+    const novoPersonagem = { nome, idade, ocupacao, str, con, siz, dex, app, int, pow, edu, HP, SAN, MP, sanAtual, sanMax, pvAtual, pvMax, pmAtual, pmMax };
     personagemStorage.push(novoPersonagem);
     salvarForm();
     renderizarPersonagem(novoPersonagem);
@@ -51,6 +51,9 @@ function renderizarPersonagem(p) {
     const personagem = document.createElement('div');
     personagem.className = 'card';
     personagem.innerHTML = `
+        <button class="btn-deletar" onclick="deletar(this)" title="Excluir personagem">
+            <i class="fa-solid fa-trash"></i>
+        </button>
         <h1>${p.nome}</h1>
         <p>${p.ocupacao} - <label>${p.idade} Anos</label></p>
         <div><i class="fa-regular fa-heart"></i>
@@ -83,4 +86,16 @@ function renderizarPersonagem(p) {
         <p>Nenhum</p>
     `;
     document.getElementById('grid').appendChild(personagem);
+}
+
+function deletar(botao) {
+    const card = botao.closest('.card');
+    const nome = card.querySelector('h1').textContent;
+    personagemStorage = personagemStorage.filter(p => p.nome !== nome);
+    salvarForm();
+    card.remove();
+}
+
+window.onload = function() {
+    personagemStorage.forEach(p => renderizarPersonagem(p));
 }

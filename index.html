@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>  
+    <div class="background-add" id="modal" onclick="this.style.display='none'">
+        <div class="add" onclick="event.stopPropagation()">
+            <h1><i class="fa-solid fa-book"></i> Novo Investigador</h1>
+
+            <hr>
+            
+            <button></button>
+        </div>
+    </div>
     <header>
         <div class="logo-comp">
             <div class="logo"><img src="./images/caveira-e-ossos.png" alt=""></div>
@@ -28,7 +37,7 @@
                 <h1>Investigadores</h1>
                 <h4>Gerencie os corajosos que enfrentam o desconhecido</h4>
             </div>
-            <div class="button-add"><button class="selected"><i class="fa-solid fa-book-open"></i> Novo Investigador</button></div>
+            <div class="button-add"><button class="selected" onclick="document.getElementById('modal').style.display='flex'"><i class="fa-solid fa-book-open"></i> Novo Investigador</button></div>
         </div>
 
         <div class="grid">
@@ -36,4 +45,5 @@
         </div>
     </div>
 </body>
+<script src="./scripts/script.js"></script>
 </html>

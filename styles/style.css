@@ -445,6 +445,48 @@ textarea:focus {
     color: white !important;
 }
 
+/* -------------------- BOTÕES HOVER CARD -------------------- */
+.card {
+    position: relative;
+}
+.btn-deletar,
+.btn-editar {
+    position: absolute;
+    top: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    padding: 0.3rem 0.55rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s, background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-deletar {
+    right: 0.75rem;
+    background-color: #7a1e1e;
+    color: #ffaaaa;
+}
+.btn-editar {
+    right: 3rem;
+    background-color: #1e4a7a;
+    color: #aaccff;
+}
+.card:hover .btn-deletar,
+.card:hover .btn-editar {
+    opacity: 1;
+}
+.btn-deletar:hover {
+    background-color: #a02020 !important;
+    color: white !important;
+}
+.btn-editar:hover {
+    background-color: #1a5fa0 !important;
+    color: white !important;
+}
+
 /*---------------- Setinhas -------------*/
 /* Chrome, Safari, Edge */
 input[type="number"]::-webkit-inner-spin-button,

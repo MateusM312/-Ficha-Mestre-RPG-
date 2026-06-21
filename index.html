@@ -1,21 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Call of Cthulhu</title>
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="shortcut icon" href="/images/caveira-e-ossos.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>  
+
+<body>
     <div class="background-add" id="modal" onclick="this.style.display='none'">
         <div class="add" onclick="event.stopPropagation()">
             <h1><i class="fa-solid fa-book"></i> Novo Investigador</h1>
-
             <hr>
-            
-            <div><button class="selected">ADICIONAR</button></div>
+            <form action="post">
+                <div class="box">
+                    <label>Nome</label> <br>
+                    <input type="text" name="name" id="iname">
+                </div>
+                <br>
+                <div class="box">
+                    <label>Idade</label> <br>
+                    <input type="number" value="18">
+                </div>
+                <br>
+                <div class="ocupação-box">
+                    <label>Ocupação</label> <br>
+                    <input type="text" placeholder="Ex: Detetive, Professor, Médico, Jornalista...">
+                </div>
+                <br>
+                <h2>Características</h2>
+                <hr>
+
+                <button type="button" class="selected">Criar Personagem</button>
+                <br>
+                <button type="button" class="selected">Voltar</button>
+            </form>
         </div>
     </div>
     <header>
@@ -28,7 +52,8 @@
         </div>
         <div class="buttons-switch">
             <button class="selected"><i class="fa-solid fa-user-plus"></i>Investigadores</button>
-            <button onclick="window.location.href='./pages/Inimigo.html'" class="header-inactive"><i class="fa-solid fa-skull-crossbones"></i></i>Inimigos & Criaturas</button>
+            <button onclick="window.location.href='./pages/Inimigo.html'" class="header-inactive"><i
+                    class="fa-solid fa-skull-crossbones"></i></i>Inimigos & Criaturas</button>
         </div>
     </header>
     <div class="body-mod">
@@ -37,7 +62,9 @@
                 <h1>Investigadores</h1>
                 <h4>Gerencie os corajosos que enfrentam o desconhecido</h4>
             </div>
-            <div class="button-add"><button class="selected" onclick="document.getElementById('modal').style.display='flex'"><i class="fa-solid fa-book-open"></i> Novo Investigador</button></div>
+            <div class="button-add"><button class="selected"
+                    onclick="document.getElementById('modal').style.display='flex'"><i
+                        class="fa-solid fa-book-open"></i> Novo Investigador</button></div>
         </div>
 
         <div class="grid">
@@ -46,4 +73,5 @@
     </div>
 </body>
 <script src="./scripts/script.js"></script>
+
 </html>

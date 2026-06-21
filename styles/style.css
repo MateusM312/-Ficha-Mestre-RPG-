@@ -313,7 +313,7 @@ button{
 }
 .add input[type="text"],
 .add input[type="number"] {
-    background-color: #1a2c30;
+    background-color: #0d1117;
     border: 1px solid #243d41;
     border-radius: 6px;
     color: #c8d8dc;
@@ -324,6 +324,7 @@ button{
     margin-top: 0.3rem;
     outline: none;
     transition: border-color 0.2s;
+    text-align: center;
 }
 .add input:focus {
     border-color: #4a9d87;
@@ -362,6 +363,12 @@ button{
 .btn-adicionar:hover {
   background: #2dd4a020;
 }
+
+.btn-group{
+    display: flex;
+    gap: 10px;
+}
+
 
 /*------------------ text-area --------------*/
 textarea {
@@ -408,4 +415,17 @@ textarea:focus {
   color: #aaa;
   margin-bottom: 4px;
   display: block;
+}
+
+/*---------------- Setinhas -------------*/
+/* Chrome, Safari, Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }

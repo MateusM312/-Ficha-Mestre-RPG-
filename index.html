@@ -20,7 +20,8 @@
             <form action="post">
                 <div class="box">
                     <label>Nome</label>
-                    <input type="text" name="name" id="iName" placeholder="Digite o nome do persoangem...">
+                    <input type="text" name="name" id="iName" placeholder="Digite o nome do persoangem..."
+                        autocomplete="off">
                 </div>
                 <br>
                 <div class="box">
@@ -114,9 +115,12 @@
                     <h2>História (opcional)</h2>
                     <textarea name="hist" id="ihist" placeholder="Conte a História do investigador..."></textarea>
                 </div>
-                <button type="button" class="selected">Criar Personagem</button>
                 <br>
-                <button type="button" class="selected" onclick="fecharForm()">Voltar</button>
+                <div class="btn-group">
+                    <button type="button" class="selected" style="width: 600px;">Criar Personagem</button>
+                    <br>
+                    <button type="button" class="selected" onclick="fecharForm()">Voltar</button>
+                </div>
             </form>
         </div>
     </div>

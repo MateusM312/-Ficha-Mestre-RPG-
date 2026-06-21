@@ -24,13 +24,126 @@
         </div>
     </header>
 
+    <div class="background-add" id="modal" onclick="fecharForm()">
+        <div class="add" onclick="event.stopPropagation()">
+            <h1><i class="fa-solid fa-book"></i> Novo Investigador</h1>
+            <hr>
+            <form action="post">
+                <div class="box">
+                    <label>Nome</label>
+                    <input type="text" name="name" style="text-align: left;" id="iName" placeholder="Digite o nome do persoangem..."
+                        autocomplete="off">
+                </div>
+                <br>
+                <div class="box">
+                    <label>Idade</label>
+                    <input style="text-align: left;" type="number" value="18" id="iDade">
+                </div>
+                <br>
+                <div class="ocupação-box">
+                    <label>Ocupação</label>
+                    <input style="text-align: left;" type="text" id="iocup" placeholder="Ex: Detetive, Professor, Médico, Jornalista...">
+                </div>
+                <br>
+                <h2>Características</h2>
+                <hr>
+                <div class="grid-caracs">
+                    <div class="carac-box">
+                        <label>Força (STR)</label>
+                        <input type="number" id="iFor" value=50>
+                    </div>
+                    <div class="carac-box">
+                        <label>Constituição (CON)</label>
+                        <input type="number" id="iConst" value=50>
+                    </div>
+                    <div class="carac-box">
+                        <label>Tamanho (SIZ)</label>
+                        <input type="number" id="iTam" value=50>
+                    </div>
+                    <div class="carac-box">
+                        <label>Destreza (DEX)</label>
+                        <input type="number" id="iDes" value=50>
+                    </div>
+                    <div class="carac-box">
+                        <label>Aparência (APP)</label>
+                        <input type="number" id="iApar" value=50>
+                    </div>
+                    <div class="carac-box">
+                        <label>Inteligência (INT)</label>
+                        <input type="number" id="iTen" value=50>
+                    </div>
+                    <div class="carac-box">
+                        <label>Poder (POw)</label>
+                        <input type="number" id="iPower" value=50>
+                    </div>
+                    <div class="carac-box">
+                        <label>Educação (EDU)</label>
+                        <input type="number" id="iEduc" value=50>
+                    </div>
+                </div>
+                <br>
+                <h2>Pontos Derivados</h2>
+                <hr>
+                <div class="grid-points">
+                    <div class="points-box">
+                        <label>Sanidade Atual</label>
+                        <input type="number" id="iSanAt" value="50">
+                    </div>
+                    <div class="points-box">
+                        <label>Sanidade Máxima</label>
+                        <input type="number" id="iSantMax" value="50">
+                    </div>
+                    <div class="points-box">
+                        <label>PV Atual</label>
+                        <input type="number" id="iPvAt" value="10">
+                    </div>
+                    <div class="points-box">
+                        <label>PV Máximo</label>
+                        <input type="number" id="iPvMax" value="50">
+                    </div>
+                    <div class="points-box">
+                        <label>PM Atual</label>
+                        <input type="number" id="iPmMax" value="50">
+                    </div>
+                    <div class="points-box">
+                        <label>PM Máximo</label>
+                        <input type="number" id="iPmMax" value="10">
+                    </div>
+                </div>
+                <br>
+                <hr>
+                <div class="div-botão-pai">
+                    <h2>Armas</h2>
+                    <button class="btn-adicionar" id="button-add-armamento" onclick="adicionarArmamento()">+ Adicionar Armamento</button>
+                </div>
+                <hr>
+                <div class="div-botão-mãe">
+                    <h2>Inventário</h2>
+                    <button class="btn-adicionar" id="button-add-item" onclick="adicionarItem()">+ Adicionar Item</button>
+                </div>
+                <hr>
+                <div class="hist-box">
+                    <h2>História (opcional)</h2>
+                    <textarea name="hist" id="ihist" placeholder="Conte a História do investigador..."></textarea>
+                </div>
+                <br>
+                <div class="btn-group">
+                    <button type="button" class="selected" style="width: 600px;" onclick="criarPersonagem()">Criar Personagem</button>
+                    <br>
+                    <button type="button" class="selected" onclick="fecharForm()">Voltar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
     <div class="body-mod">
         <div class="description">
             <div class="desc-inv">
                 <h1>Inimigos & Criaturas</h1>
                 <h4>Gerencie os horrores que espreitam nas sombras</h4>
             </div>
-            <div class="button-add"><button class="selected"><i class="fa-solid fa-skull"></i> Nova Criatura</button></div>
+            <div class="button-add"><button class="selected" onclick="abrirForm()"><i class="fa-solid fa-skull" ></i> Nova Criatura</button></div>
         </div>
 
         <div class="grid">
@@ -38,5 +151,6 @@
         </div>
     </div>
 
+    <script src="../scripts/scriptInimigo.js"></script>
 </body>
 </html>

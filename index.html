@@ -20,18 +20,18 @@
             <form action="post">
                 <div class="box">
                     <label>Nome</label>
-                    <input type="text" name="name" id="iName" placeholder="Digite o nome do persoangem..."
+                    <input type="text" name="name" style="text-align: left;" id="iName" placeholder="Digite o nome do persoangem..."
                         autocomplete="off">
                 </div>
                 <br>
                 <div class="box">
                     <label>Idade</label>
-                    <input type="number" value="18" id="iDade">
+                    <input style="text-align: left;" type="number" value="18" id="iDade">
                 </div>
                 <br>
                 <div class="ocupação-box">
                     <label>Ocupação</label>
-                    <input type="text" id="iocup" placeholder="Ex: Detetive, Professor, Médico, Jornalista...">
+                    <input style="text-align: left;" type="text" id="iocup" placeholder="Ex: Detetive, Professor, Médico, Jornalista...">
                 </div>
                 <br>
                 <h2>Características</h2>
@@ -103,12 +103,12 @@
                 <hr>
                 <div class="div-botão-pai">
                     <h2>Armas</h2>
-                    <button class="btn-adicionar">+ Adicionar Armamento</button>
+                    <button class="btn-adicionar" id="button-add-armamento" onclick="adicionarArmamento()">+ Adicionar Armamento</button>
                 </div>
                 <hr>
                 <div class="div-botão-mãe">
                     <h2>Inventário</h2>
-                    <button class="btn-adicionar">+ Adicionar Item</button>
+                    <button class="btn-adicionar" id="button-add-item" onclick="adicionarItem()">+ Adicionar Item</button>
                 </div>
                 <hr>
                 <div class="hist-box">
@@ -117,7 +117,7 @@
                 </div>
                 <br>
                 <div class="btn-group">
-                    <button type="button" class="selected" style="width: 600px;">Criar Personagem</button>
+                    <button type="button" class="selected" style="width: 600px;" onclick="criarPersonagem()">Criar Personagem</button>
                     <br>
                     <button type="button" class="selected" onclick="fecharForm()"
                         style="background-color: #3a3a3a;">Voltar</button>

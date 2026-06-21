@@ -71,10 +71,6 @@
                         <input type="number" id="iDes" value=50>
                     </div>
                     <div class="carac-box">
-                        <label>Aparência (APP)</label>
-                        <input type="number" id="iApar" value=50>
-                    </div>
-                    <div class="carac-box">
                         <label>Inteligência (INT)</label>
                         <input type="number" id="iTen" value=50>
                     </div>
@@ -82,23 +78,11 @@
                         <label>Poder (POw)</label>
                         <input type="number" id="iPower" value=50>
                     </div>
-                    <div class="carac-box">
-                        <label>Educação (EDU)</label>
-                        <input type="number" id="iEduc" value=50>
-                    </div>
                 </div>
                 <br>
                 <h2>Pontos Derivados</h2>
                 <hr>
                 <div class="grid-points">
-                    <div class="points-box">
-                        <label>Sanidade Atual</label>
-                        <input type="number" id="iSanAt" value="50">
-                    </div>
-                    <div class="points-box">
-                        <label>Sanidade Máxima</label>
-                        <input type="number" id="iSantMax" value="50">
-                    </div>
                     <div class="points-box">
                         <label>PV Atual</label>
                         <input type="number" id="iPvAt" value="10">
@@ -108,12 +92,12 @@
                         <input type="number" id="iPvMax" value="50">
                     </div>
                     <div class="points-box">
-                        <label>PM Atual</label>
+                        <label>Armadura</label>
                         <input type="number" id="iPmMax" value="50">
                     </div>
                     <div class="points-box">
-                        <label>PM Máximo</label>
-                        <input type="number" id="iPmMax" value="10">
+                        <label>Perda de SAN</label>
+                        <input type="number" id="iPmMax" placeholder="1/1D6">
                     </div>
                 </div>
                 <br>
@@ -124,28 +108,24 @@
                         Armamento</button>
                 </div>
                 <hr>
-                <div class="div-botão-mãe">
-                    <h2>Inventário</h2>
-                    <button class="btn-adicionar" id="button-add-item" onclick="adicionarItem()">+ Adicionar
-                        Item</button>
-                </div>
-                <hr>
                 <div class="div-botão-filho">
-                    <h2>Habilidades Especiais</h2>
+                    <h2>Habilidades</h2>
                     <button class="btn-adicionar" id="button-add-item" onclick="adicionarItem()">+ Adicionar
                         Habilidades</button>
                 </div>
                 <hr>
                 <div class="hist-box">
-                    <h2>História (opcional)</h2>
-                    <textarea name="hist" id="ihist" placeholder="Conte a História do investigador..."></textarea>
+                    <h2>Descrição</h2>
+                    <textarea name="hist" id="ihist"
+                        placeholder="Descreva a criatura e suas habilidades especiais..."></textarea>
                 </div>
                 <br>
                 <div class="btn-group">
                     <button type="button" class="selected" style="width: 600px;" onclick="criarPersonagem()">Criar
-                        Personagem</button>
+                        Monstro</button>
                     <br>
-                    <button type="button" class="selected" onclick="fecharForm()">Voltar</button>
+                    <button type="button" class="selected" onclick="fecharForm()"
+                        style="background-color: #1b2129; color: gray;">Voltar</button>
                 </div>
             </form>
         </div>

@@ -19,23 +19,101 @@
             <hr>
             <form action="post">
                 <div class="box">
-                    <label>Nome</label> <br>
-                    <input type="text" name="name" id="iname">
+                    <label>Nome</label>
+                    <input type="text" name="name" id="iName" placeholder="Digite o nome do persoangem...">
                 </div>
                 <br>
                 <div class="box">
-                    <label>Idade</label> <br>
-                    <input type="number" value="18">
+                    <label>Idade</label>
+                    <input type="number" value="18" id="iDade">
                 </div>
                 <br>
                 <div class="ocupação-box">
-                    <label>Ocupação</label> <br>
-                    <input type="text" placeholder="Ex: Detetive, Professor, Médico, Jornalista...">
+                    <label>Ocupação</label>
+                    <input type="text" id="iocup" placeholder="Ex: Detetive, Professor, Médico, Jornalista...">
                 </div>
                 <br>
                 <h2>Características</h2>
                 <hr>
-
+                <div class="grid-caracs">
+                    <div class="carac-box">
+                        <label>Força (STR)</label>
+                        <input type="number" id="iFor" value=50>
+                    </div>
+                    <div class="carac-box">
+                        <label>Constituição (CON)</label>
+                        <input type="number" id="iConst" value=50>
+                    </div>
+                    <div class="carac-box">
+                        <label>Tamanho (SIZ)</label>
+                        <input type="number" id="iTam" value=50>
+                    </div>
+                    <div class="carac-box">
+                        <label>Destreza (DEX)</label>
+                        <input type="number" id="iDes" value=50>
+                    </div>
+                    <div class="carac-box">
+                        <label>Aparência (APP)</label>
+                        <input type="number" id="iApar" value=50>
+                    </div>
+                    <div class="carac-box">
+                        <label>Inteligência (INT)</label>
+                        <input type="number" id="iTen" value=50>
+                    </div>
+                    <div class="carac-box">
+                        <label>Poder (POw)</label>
+                        <input type="number" id="iPower" value=50>
+                    </div>
+                    <div class="carac-box">
+                        <label>Educação (EDU)</label>
+                        <input type="number" id="iEduc" value=50>
+                    </div>
+                </div>
+                <br>
+                <h2>Pontos Derivados</h2>
+                <hr>
+                <div class="grid-points">
+                    <div class="points-box">
+                        <label>Sanidade Atual</label>
+                        <input type="number" id="iSanAt" value="50">
+                    </div>
+                    <div class="points-box">
+                        <label>Sanidade Máxima</label>
+                        <input type="number" id="iSantMax" value="50">
+                    </div>
+                    <div class="points-box">
+                        <label>PV Atual</label>
+                        <input type="number" id="iPvAt" value="10">
+                    </div>
+                    <div class="points-box">
+                        <label>PV Máximo</label>
+                        <input type="number" id="iPvMax" value="50">
+                    </div>
+                    <div class="points-box">
+                        <label>PM Atual</label>
+                        <input type="number" id="iPmMax" value="50">
+                    </div>
+                    <div class="points-box">
+                        <label>PM Máximo</label>
+                        <input type="number" id="iPmMax" value="10">
+                    </div>
+                </div>
+                <br>
+                <hr>
+                <div class="div-botão-pai">
+                    <h2>Armas</h2>
+                    <button class="btn-adicionar">+ Adicionar Armamento</button>
+                </div>
+                <hr>
+                <div class="div-botão-mãe">
+                    <h2>Inventário</h2>
+                    <button class="btn-adicionar">+ Adicionar Item</button>
+                </div>
+                <hr>
+                <div class="hist-box">
+                    <h2>História (opcional)</h2>
+                    <textarea name="hist" id="ihist" placeholder="Conte a História do investigador..."></textarea>
+                </div>
                 <button type="button" class="selected">Criar Personagem</button>
                 <br>
                 <button type="button" class="selected" onclick="fecharForm()">Voltar</button>
@@ -62,29 +140,55 @@
                 <h1>Investigadores</h1>
                 <h4>Gerencie os corajosos que enfrentam o desconhecido</h4>
             </div>
-            <div class="button-add"><button class="selected"
-                    onclick="abrirForm()"><i
-                        class="fa-solid fa-book-open"></i> Novo Investigador</button></div>
+            <div class="button-add"><button class="selected" onclick="abrirForm()"><i class="fa-solid fa-book-open"></i>
+                    Novo Investigador</button></div>
         </div>
 
         <div class="grid">
             <div class="card">
                 <h1>Dr. Thomas Blackwood</h1>
                 <p>Professor de Arqueologia - <label>45 Anos</label></p>
-                
-                <div><i class="fa-regular fa-heart"></i><div class="background-bar"><div class="up-background-bar"></div></div> <p>13/13</p></div>
-                <div><i class="fa-solid fa-brain"></i><div class="background-bar"><div class="up-background-bar"></div></div> <p>58/56</p></div>
-                <div><i class="fa-solid fa-bolt"></i><div class="background-bar"><div class="up-background-bar"></div></div> <p>13/13</p></div>
-                
+
+                <div><i class="fa-regular fa-heart"></i>
+                    <div class="background-bar">
+                        <div class="up-background-bar"></div>
+                    </div>
+                    <p>13/13</p>
+                </div>
+                <div><i class="fa-solid fa-brain"></i>
+                    <div class="background-bar">
+                        <div class="up-background-bar"></div>
+                    </div>
+                    <p>58/56</p>
+                </div>
+                <div><i class="fa-solid fa-bolt"></i>
+                    <div class="background-bar">
+                        <div class="up-background-bar"></div>
+                    </div>
+                    <p>13/13</p>
+                </div>
+
                 <hr>
 
                 <div>
-                    <div class="stats"><p>FOR</p><div class="stats-number">60</div></div>
-                    <div class="stats"><p>DES</p><div class="stats-number">55</div></div>
-                    <div class="stats"><p>INT</p><div class="stats-number">80</div></div>
-                    <div class="stats"><p>POW</p><div class="stats-number">65</div></div>
+                    <div class="stats">
+                        <p>FOR</p>
+                        <div class="stats-number">60</div>
+                    </div>
+                    <div class="stats">
+                        <p>DES</p>
+                        <div class="stats-number">55</div>
+                    </div>
+                    <div class="stats">
+                        <p>INT</p>
+                        <div class="stats-number">80</div>
+                    </div>
+                    <div class="stats">
+                        <p>POW</p>
+                        <div class="stats-number">65</div>
+                    </div>
                 </div>
-                
+
                 <hr>
 
                 <p>Armamento</p>
@@ -94,4 +198,5 @@
     </div>
 </body>
 <script src="./scripts/script.js"></script>
+
 </html>

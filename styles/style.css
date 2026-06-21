@@ -68,6 +68,7 @@ button{
 }
 
 .selected:hover{
+    cursor: pointer;
     background-color: #448E7B;
     color: #0A0E14;
 }
@@ -178,6 +179,7 @@ button{
     align-items: center;
     justify-content: center;
     z-index: 999;
+    display: none;
 }
 
 .add {

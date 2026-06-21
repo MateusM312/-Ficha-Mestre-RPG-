@@ -1,17 +1,15 @@
-function salvarForm() {
-    localStorage.setItem('clienteStorage', JSON.stringify(clienteStorage));
+function salvarForm() { // salva localmente
+    localStorage.setItem('personagemStorage', JSON.stringify(personagemStorage));
 }
 
 function abrirForm() {
-    const form = document.getElementById('modal'); // 'modal', não 'background-add'
-    form.style.display = 'flex'; // flex, não block (o CSS usa display: flex)
+    const form = document.getElementById('modal');
+    form.style.display = 'flex';
 }
 
 function fecharForm() {
     document.getElementById('modal').style.display = 'none';
 }
 
-function criarPERSONAGEM(){
-    const nome = document.getElementById().value
-
+function criarPersonagem(){
 }

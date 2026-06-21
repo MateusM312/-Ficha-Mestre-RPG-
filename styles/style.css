@@ -20,6 +20,7 @@ header{
     border-bottom: 1px solid #1a2c30;
     margin: 0;
     left: 0;
+    z-index: 100;
 }
 .buttons-switch{
     display: flex;
@@ -161,7 +162,7 @@ button{
     flex-direction: column;
     gap: 0.4rem;
     transition: border-color 0.2s;
-    z-index: -1;
+    z-index: 0;
 }
 .card:hover {
     border-color: #4a9d87;

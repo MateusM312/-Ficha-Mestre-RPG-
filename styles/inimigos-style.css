@@ -9,9 +9,8 @@ body{
 }
 
 /* -------------------- HEADER RELATED -------------------- */
-
 header{
-    background-color: transparent;
+    background-color: #1e1010;
     backdrop-filter: blur(20px);
     display: flex;
     align-items: center;
@@ -23,15 +22,13 @@ header{
     border-bottom: 1px solid #301a1a;
     margin: 0;
     left: 0;
-    background-color: #1e1010;
+    z-index: 100;
 }
-
 .buttons-switch{
     display: flex;
     margin-right: 5%;
     gap: 4%;
 }
-
 .header-inactive:hover{
     background-color: #1e1310;
     color: #B3BDC3;
@@ -49,9 +46,8 @@ header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
 }
-
 button{
     background-color: #9d4a4a;
     border: none;
@@ -64,9 +60,8 @@ button{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
 }
-
 .selected:hover{
     cursor: pointer;
     background-color: #8e4444;
@@ -84,9 +79,8 @@ button{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
 }
-
 .logo-comp{
     display: flex;
     align-items: center;
@@ -94,24 +88,10 @@ button{
     color: white;
     width: 25%;
 }
-
-.logo-comp h1, h2, h3, h4{
-    margin: 0;
-}
-
-.logo-comp h1{
-    color: #994848;
-}
-
-.logo-comp h4{
-    color: #806767;
-    font-size: 12px;
-}
-
-.logo img{
-    width: 32px;
-}
-
+.logo-comp h1, h2, h3, h4{ margin: 0; }
+.logo-comp h1{ color: #994848; }
+.logo-comp h4{ color: #806767; font-size: 12px; }
+.logo img{ width: 32px; }
 .logo{
     display: flex;
     align-items: center;
@@ -124,48 +104,132 @@ button{
 }
 
 /* -------------------- Descrição/Header2 -------------------- */
-
 .description{
     display: flex;
     margin: 0;
-    padding: 11% 0;
+    padding: 11% 0 2% 0;
     width: 100%;
     justify-content: center;
-    gap: 182px;   
+    gap: 182px;
 }
-
-.description h1{
-    color: #8e4444;
-}
-
-.desc-inv h4{
-    color: #806767;
-}
-
+.description h1{ color: #8e4444; }
+.desc-inv h4{ color: #806767; }
 .button-add{
     display: flex;
     height: fit-content;
     justify-content: center;
     margin-top: 2%;
 }
+.button-add button{ cursor: pointer; }
+.desc-inv{ color: white; margin: 0; height: fit-content; padding: 0; }
+.body-mod{ display: flex; min-height: 100vh; flex-direction: column; }
 
-.button-add button{
-    cursor: pointer;
+/* -------------------- GRID -------------------- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0 8% 4% 8%;
 }
 
-.desc-inv{
+/* -------------------- CARD -------------------- */
+.card {
+    background-color: #1a0d0d;
+    border: 1px solid #301a1a;
+    border-radius: 12px;
+    padding: 1.5rem;
     color: white;
-    margin: 0;
-    height: fit-content;
-    padding: 0;
-}
-
-.body-mod{
     display: flex;
-    height: 100vh;
     flex-direction: column;
+    gap: 0.4rem;
+    transition: border-color 0.2s;
+    position: relative;
+}
+.card:hover { border-color: #9d4a4a; }
+.card > h1 { color: #9d4a4a; font-size: 1.2rem; margin: 0; }
+.card > p:first-of-type { color: #806767; font-size: 0.85rem; margin: 0 0 0.4rem 0; }
+
+/* -------------------- BARRAS -------------------- */
+.card > div:has(.background-bar) {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.card > div:has(.background-bar) > i { width: 16px; font-size: 0.9rem; }
+.card > div:has(.background-bar):nth-of-type(1) > i { color: #e05c5c; }
+.background-bar {
+    flex: 1;
+    background-color: #2c1a1a;
+    border-radius: 999px;
+    height: 8px;
+    overflow: hidden;
+}
+.up-background-bar { height: 100%; border-radius: 999px; width: 100%; }
+.card > div:has(.background-bar):nth-of-type(1) .up-background-bar { background-color: #e05c5c; }
+.card > div:has(.background-bar) > p {
+    color: #806767;
+    font-size: 0.8rem;
+    min-width: 44px;
+    text-align: right;
+    margin: 0;
 }
 
+/* -------------------- STATS -------------------- */
+.card > div:has(.stats) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+.stats { display: flex; flex-direction: column; align-items: center; gap: 0.2rem; }
+.stats p { color: #806767; font-size: 0.7rem; margin: 0; text-transform: uppercase; letter-spacing: 0.05em; }
+.stats-number {
+    background-color: #2c1a1a;
+    color: #dcc8c8;
+    border-radius: 6px;
+    padding: 0.3rem 0.4rem;
+    font-size: 0.95rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.card hr { border: none; border-top: 1px solid #2c1a1a; margin: 0.2rem 0; }
+
+/* -------------------- CARD LABELS -------------------- */
+.card-label {
+    color: #806767;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0.25rem 0 0 0;
+}
+p { margin: 0; }
+
+/* -------------------- BOTÕES HOVER CARD -------------------- */
+.btn-deletar,
+.btn-editar {
+    position: absolute;
+    top: 0.75rem;
+    border: none;
+    border-radius: 6px;
+    padding: 0.3rem 0.55rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s, background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-deletar { right: 0.75rem; background-color: #7a1e1e; color: #ffaaaa; }
+.btn-editar  { right: 3rem;    background-color: #1e4a7a; color: #aaccff; }
+.card:hover .btn-deletar,
+.card:hover .btn-editar { opacity: 1; }
+.btn-deletar:hover { background-color: #a02020 !important; color: white !important; }
+.btn-editar:hover  { background-color: #1a5fa0 !important; color: white !important; }
+
+/* -------------------- MODAL -------------------- */
 .background-add {
     position: fixed;
     top: 0;
@@ -189,7 +253,7 @@ button{
     position: relative;
 }
 .add h1 { color: #9d4a4a; font-size: 1.3rem; margin: 0 0 0.5rem 0; }
-.add h2 { color: #c8d8dc; font-size: 1rem; margin: 1rem 0 0.3rem 0; }
+.add h2 { color: #dcc8c8; font-size: 1rem; margin: 1rem 0 0.3rem 0; }
 .add hr { border: none; border-top: 1px solid #2c1a1a; margin: 0.3rem 0 1rem 0; }
 .add label { color: #806767; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; }
 .add input[type="text"],
@@ -208,21 +272,66 @@ button{
     text-align: center;
 }
 .add input:focus { border-color: #9d4a4a; }
-
 .box, .ocupação-box { display: flex; flex-direction: column; }
+.add form > button { margin-top: 0.5rem; width: 100%; justify-content: center; }
 
-.btn-adicionar { background: transparent; border: 1px solid #e05c5c; border-radius: 6px; color: #e05c5c; padding: 6px 14px; font-size: 13px; cursor: pointer; }
-
+/* -------------------- Botões do modal -------------------- */
+.div-botão-pai,
+.div-botão-mãe,
+.div-botão-filho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn-adicionar {
+    background: transparent;
+    border: 1px solid #e05c5c;
+    border-radius: 6px;
+    color: #e05c5c;
+    padding: 6px 14px;
+    font-size: 13px;
+    cursor: pointer;
+}
 .btn-adicionar:hover { background: #e05c5c20; }
-
 .btn-group { display: flex; gap: 10px; }
 
-.div-botão-pai, .div-botão-mãe, .div-botão-filho { display: flex; align-items: center; justify-content: space-between; }
+/* -------------------- Item linha -------------------- */
+.item-linha { display: flex; gap: 0.5rem; align-items: center; margin: 0.4rem 0; }
+.item-linha input { flex: 1; margin-top: 0; }
+.btn-remover {
+    background-color: #7a1e1e;
+    color: #ffaaaa;
+    border: none;
+    border-radius: 6px;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+.btn-remover:hover { background-color: #a02020 !important; color: white !important; }
 
-.grid-caracs, .grid-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-textarea { width: 100%; background: #0d0808; border: 1px solid #3a2020; border-radius: 6px; padding: 10px 12px; color: #ccc; font-size: 14px; box-sizing: border-box; resize: vertical; }
+/* -------------------- Textarea -------------------- */
+textarea {
+    width: 100%;
+    background: #0d0808;
+    border: 1px solid #3a2020;
+    border-radius: 6px;
+    padding: 10px 12px;
+    color: #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+    resize: vertical;
+}
 textarea::placeholder { color: #644; }
 textarea:focus { outline: none; border-color: #e05c5c; }
+
+/* -------------------- Grids modal -------------------- */
+.grid-caracs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.carac-box { font-size: 12px; color: #aaa; margin-bottom: 4px; display: block; }
+.grid-points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.points-box { font-size: 12px; color: #aaa; margin-bottom: 4px; display: block; }
+
+/* -------------------- Setinhas -------------------- */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
 input[type="number"] { -moz-appearance: textfield; appearance: textfield; }

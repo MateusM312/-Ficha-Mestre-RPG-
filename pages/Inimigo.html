@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 
 <body>
@@ -25,7 +24,7 @@
         <div class="buttons-switch">
             <button class="header-inactive" onclick="window.location.href='../index.html'"><i
                     class="fa-solid fa-user-plus"></i>Investigadores</button>
-            <button class="selected"><i class="fa-solid fa-skull-crossbones"></i></i>Inimigos & Criaturas</button>
+            <button class="selected"><i class="fa-solid fa-skull-crossbones"></i>Inimigos & Criaturas</button>
         </div>
     </header>
 
@@ -40,11 +39,6 @@
                         placeholder="Digite o nome da criatura..." autocomplete="off">
                 </div>
                 <br>
-                <div class="box">
-                    <label>Idade</label>
-                    <input style="text-align: left;" type="number" value="18" id="iDade">
-                </div>
-                <br>
                 <div class="ocupação-box">
                     <label>Tipo</label>
                     <input style="text-align: left;" type="text" id="iocup"
@@ -56,27 +50,27 @@
                 <div class="grid-caracs">
                     <div class="carac-box">
                         <label>Força (STR)</label>
-                        <input type="number" id="iFor" value=50>
+                        <input type="number" id="iFor" value="50">
                     </div>
                     <div class="carac-box">
                         <label>Constituição (CON)</label>
-                        <input type="number" id="iConst" value=50>
+                        <input type="number" id="iConst" value="50">
                     </div>
                     <div class="carac-box">
                         <label>Tamanho (SIZ)</label>
-                        <input type="number" id="iTam" value=50>
+                        <input type="number" id="iTam" value="50">
                     </div>
                     <div class="carac-box">
                         <label>Destreza (DEX)</label>
-                        <input type="number" id="iDes" value=50>
+                        <input type="number" id="iDes" value="50">
                     </div>
                     <div class="carac-box">
                         <label>Inteligência (INT)</label>
-                        <input type="number" id="iTen" value=50>
+                        <input type="number" id="iTen" value="50">
                     </div>
                     <div class="carac-box">
-                        <label>Poder (POw)</label>
-                        <input type="number" id="iPower" value=50>
+                        <label>Poder (POW)</label>
+                        <input type="number" id="iPower" value="50">
                     </div>
                 </div>
                 <br>
@@ -89,40 +83,38 @@
                     </div>
                     <div class="points-box">
                         <label>PV Máximo</label>
-                        <input type="number" id="iPvMax" value="50">
+                        <input type="number" id="iPvMax" value="10">
                     </div>
                     <div class="points-box">
                         <label>Armadura</label>
-                        <input type="number" id="iPmMax" value="50">
+                        <input type="number" id="iArmadura" value="0">
                     </div>
                     <div class="points-box">
                         <label>Perda de SAN</label>
-                        <input type="number" id="iPmMax" placeholder="1/1D6">
+                        <input type="text" id="iSanLoss" placeholder="Ex: 1/1D6">
                     </div>
                 </div>
                 <br>
                 <hr>
                 <div class="div-botão-pai">
                     <h2>Armas</h2>
-                    <button class="btn-adicionar" id="button-add-armamento" onclick="adicionarArmamento()">+ Adicionar
-                        Armamento</button>
+                    <button class="btn-adicionar" type="button" onclick="adicionarArmamento()">+ Adicionar Armamento</button>
                 </div>
+                <div id="lista-armamentos"></div>
                 <hr>
                 <div class="div-botão-filho">
                     <h2>Habilidades</h2>
-                    <button class="btn-adicionar" id="button-add-item" onclick="adicionarItem()">+ Adicionar
-                        Habilidades</button>
+                    <button class="btn-adicionar" type="button" onclick="adicionarItem()">+ Adicionar Habilidade</button>
                 </div>
+                <div id="lista-itens"></div>
                 <hr>
                 <div class="hist-box">
                     <h2>Descrição</h2>
-                    <textarea name="hist" id="ihist"
-                        placeholder="Descreva a criatura e suas habilidades especiais..."></textarea>
+                    <textarea name="hist" id="ihist" placeholder="Descreva a criatura e suas habilidades especiais..."></textarea>
                 </div>
                 <br>
                 <div class="btn-group">
-                    <button type="button" class="selected" style="width: 600px;" onclick="criarPersonagem()">Criar
-                        Monstro</button>
+                    <button type="button" class="selected btn-criar" style="width: 600px;" onclick="criarPersonagem()">Criar Monstro</button>
                     <br>
                     <button type="button" class="selected" onclick="fecharForm()"
                         style="background-color: #1b2129; color: gray;">Voltar</button>
@@ -130,7 +122,6 @@
             </form>
         </div>
     </div>
-
 
     <div class="body-mod">
         <div class="description">
@@ -142,9 +133,7 @@
                     Nova Criatura</button></div>
         </div>
 
-        <div class="grid">
-
-        </div>
+        <div class="grid" id="grid"></div>
     </div>
 
     <script src="../scripts/scriptInimigo.js"></script>

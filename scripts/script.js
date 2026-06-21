@@ -38,6 +38,9 @@ function limparForm() {
     document.getElementById("iPvMax").value = 10;
     document.getElementById("iPmAt").value = 10;
     document.getElementById("iPmMax").value = 10;
+    document.getElementById("ihist").value = '';
+    document.getElementById("lista-armamentos").innerHTML = '';
+    document.getElementById("lista-itens").innerHTML = '';
 }
 
 function preencherForm(p) {
@@ -58,6 +61,45 @@ function preencherForm(p) {
     document.getElementById("iPvMax").value = p.pvMax;
     document.getElementById("iPmAt").value = p.pmAtual;
     document.getElementById("iPmMax").value = p.pmMax;
+    document.getElementById("ihist").value = p.hist || '';
+
+    // preenche armamentos
+    const listaArm = document.getElementById('lista-armamentos');
+    listaArm.innerHTML = '';
+    (p.armamentos || []).forEach(a => {
+        const item = criarLinhaItem('Ex: Revólver .38, Faca...', a);
+        listaArm.appendChild(item);
+    });
+
+    // preenche itens
+    const listaItens = document.getElementById('lista-itens');
+    listaItens.innerHTML = '';
+    (p.itens || []).forEach(i => {
+        const item = criarLinhaItem('Ex: Lanterna, Fita, Bíblia...', i);
+        listaItens.appendChild(item);
+    });
+}
+
+function criarLinhaItem(placeholder, valor = '') {
+    const div = document.createElement('div');
+    div.className = 'item-linha';
+    div.innerHTML = `
+        <input type="text" placeholder="${placeholder}" value="${valor}">
+        <button type="button" class="btn-remover" onclick="this.parentElement.remove()">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    `;
+    return div;
+}
+
+function adicionarArmamento() {
+    const container = document.getElementById('lista-armamentos');
+    container.appendChild(criarLinhaItem('Ex: Revólver .38, Faca...'));
+}
+
+function adicionarItem() {
+    const container = document.getElementById('lista-itens');
+    container.appendChild(criarLinhaItem('Ex: Lanterna, Fita, Bíblia...'));
 }
 
 function editar(botao) {
@@ -81,23 +123,26 @@ function calcPorcentagem(atual, max) {
 
 function lerForm() {
     return {
-        nome:     document.getElementById("iName").value || "Sem nome",
-        idade:    document.getElementById("iDade").value || "Sem idade",
-        ocupacao: document.getElementById("iocup").value || "Sem ocupação",
-        str:      parseInt(document.getElementById("iFor").value) || 0,
-        con:      parseInt(document.getElementById("iConst").value) || 0,
-        siz:      parseInt(document.getElementById("iTam").value) || 0,
-        dex:      parseInt(document.getElementById("iDes").value) || 0,
-        app:      parseInt(document.getElementById("iApar").value) || 0,
-        int:      parseInt(document.getElementById("iTen").value) || 0,
-        pow:      parseInt(document.getElementById("iPower").value) || 0,
-        edu:      parseInt(document.getElementById("iEduc").value) || 0,
-        sanAtual: parseInt(document.getElementById("iSanAt").value) || 0,
-        sanMax:   parseInt(document.getElementById("iSanMax").value) || 0,
-        pvAtual:  parseInt(document.getElementById("iPvAt").value) || 0,
-        pvMax:    parseInt(document.getElementById("iPvMax").value) || 0,
-        pmAtual:  parseInt(document.getElementById("iPmAt").value) || 0,
-        pmMax:    parseInt(document.getElementById("iPmMax").value) || 0,
+        nome:       document.getElementById("iName").value || "Sem nome",
+        idade:      document.getElementById("iDade").value || "Sem idade",
+        ocupacao:   document.getElementById("iocup").value || "Sem ocupação",
+        str:        parseInt(document.getElementById("iFor").value) || 0,
+        con:        parseInt(document.getElementById("iConst").value) || 0,
+        siz:        parseInt(document.getElementById("iTam").value) || 0,
+        dex:        parseInt(document.getElementById("iDes").value) || 0,
+        app:        parseInt(document.getElementById("iApar").value) || 0,
+        int:        parseInt(document.getElementById("iTen").value) || 0,
+        pow:        parseInt(document.getElementById("iPower").value) || 0,
+        edu:        parseInt(document.getElementById("iEduc").value) || 0,
+        sanAtual:   parseInt(document.getElementById("iSanAt").value) || 0,
+        sanMax:     parseInt(document.getElementById("iSanMax").value) || 0,
+        pvAtual:    parseInt(document.getElementById("iPvAt").value) || 0,
+        pvMax:      parseInt(document.getElementById("iPvMax").value) || 0,
+        pmAtual:    parseInt(document.getElementById("iPmAt").value) || 0,
+        pmMax:      parseInt(document.getElementById("iPmMax").value) || 0,
+        hist:       document.getElementById("ihist").value || '',
+        armamentos: [...document.querySelectorAll('#lista-armamentos input')].map(i => i.value).filter(v => v.trim() !== ''),
+        itens:      [...document.querySelectorAll('#lista-itens input')].map(i => i.value).filter(v => v.trim() !== ''),
     };
 }
 
@@ -139,6 +184,9 @@ function atualizarCard(card, p) {
     nums[1].textContent = p.dex;
     nums[2].textContent = p.int;
     nums[3].textContent = p.pow;
+
+    card.querySelector('.card-armamentos').textContent = p.armamentos?.length ? p.armamentos.join(', ') : 'Nenhum';
+    card.querySelector('.card-itens').textContent = p.itens?.length ? p.itens.join(', ') : 'Nenhum';
 }
 
 function renderizarPersonagem(p) {
@@ -179,8 +227,10 @@ function renderizarPersonagem(p) {
             <div class="stats"><p>POW</p><div class="stats-number">${p.pow}</div></div>
         </div>
         <hr>
-        <p>Armamento</p>
-        <p>Nenhum</p>
+        <p class="card-label">Armamento</p>
+        <p class="card-armamentos">${p.armamentos?.length ? p.armamentos.join(', ') : 'Nenhum'}</p>
+        <p class="card-label">Inventário</p>
+        <p class="card-itens">${p.itens?.length ? p.itens.join(', ') : 'Nenhum'}</p>
     `;
     document.getElementById('grid').appendChild(personagem);
 }

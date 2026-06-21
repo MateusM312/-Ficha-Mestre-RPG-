@@ -487,6 +487,39 @@ textarea:focus {
     color: white !important;
 }
 
+.item-linha {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin: 0.4rem 0;
+}
+.item-linha input {
+    flex: 1;
+    margin-top: 0;
+}
+.btn-remover {
+    background-color: #7a1e1e;
+    color: #ffaaaa;
+    border: none;
+    border-radius: 6px;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+.btn-remover:hover {
+    background-color: #a02020 !important;
+    color: white !important;
+}
+
+.card-label {
+    color: #677580;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0.25rem 0 0 0;
+}
+
 /*---------------- Setinhas -------------*/
 /* Chrome, Safari, Edge */
 input[type="number"]::-webkit-inner-spin-button,

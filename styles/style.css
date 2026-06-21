@@ -2,14 +2,11 @@
     font-family: Arial, Helvetica, sans-serif;
     user-select: none;
 }
-
 body{
     margin: 0;
     background-color: #0a0e14;
 }
-
 /* -------------------- HEADER RELATED -------------------- */
-
 header{
     background-color: transparent;
     backdrop-filter: blur(20px);
@@ -24,13 +21,11 @@ header{
     margin: 0;
     left: 0;
 }
-
 .buttons-switch{
     display: flex;
     margin-right: 5%;
     gap: 4%;
 }
-
 .header-inactive:hover{
     background-color: #10161e;
     color: #B3BDC3;
@@ -50,8 +45,6 @@ header{
     align-items: center;
     justify-content:space-evenly;
 }
-
-
 button{
     background-color: #4a9d87;
     border: none;
@@ -66,7 +59,6 @@ button{
     align-items: center;
     justify-content:space-evenly;
 }
-
 .selected:hover{
     cursor: pointer;
     background-color: #448E7B;
@@ -86,7 +78,6 @@ button{
     align-items: center;
     justify-content:space-evenly;
 }
-
 .logo-comp{
     display: flex;
     align-items: center;
@@ -94,24 +85,19 @@ button{
     color: white;
     width: 25%;
 }
-
 .logo-comp h1, h2, h3, h4{
     margin: 0;
 }
-
 .logo-comp h1{
     color: #489984;
 }
-
 .logo-comp h4{
     color: #677580;
     font-size: 12px;
 }
-
 .logo img{
     width: 32px;
 }
-
 .logo{
     display: flex;
     align-items: center;
@@ -122,52 +108,165 @@ button{
     border: 1px solid #274a47;
     border-radius: 12px;
 }
-
 /* -------------------- Descrição/Header2 -------------------- */
-
 .description{
     display: flex;
     margin: 0;
-    padding: 11% 0;
+    padding: 11% 0 2% 0;
     width: 100%;
     justify-content: center;
     gap: 182px;   
 }
-
 .description h1{
     color: #448E7B;
 }
-
 .desc-inv h4{
     color: #677580;
 }
-
 .button-add{
     display: flex;
     height: fit-content;
     justify-content: center;
     margin-top: 2%;
 }
-
 .button-add button{
     cursor: pointer;
 }
-
 .desc-inv{
     color: white;
     margin: 0;
     height: fit-content;
     padding: 0;
 }
-
 .body-mod{
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: column;
 }
-
+/* -------------------- GRID -------------------- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0 8% 4% 8%;
+}
+/* -------------------- CARD -------------------- */
+.card {
+    background-color: #0d1821;
+    border: 1px solid #1a2c30;
+    border-radius: 12px;
+    padding: 1.5rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    transition: border-color 0.2s;
+}
+.card:hover {
+    border-color: #4a9d87;
+}
+.card > h1 {
+    color: #4a9d87;
+    font-size: 1.2rem;
+    margin: 0;
+}
+/* subtítulo: "Professor de Arqueologia - 45 Anos" */
+.card > p:first-of-type {
+    color: #677580;
+    font-size: 0.85rem;
+    margin: 0 0 0.4rem 0;
+}
+/* p aninhado dentro do subtítulo */
+.card > p > p {
+    display: inline;
+    color: #677580;
+    font-size: 0.85rem;
+    margin: 0;
+}
+/* -------------------- BARRAS -------------------- */
+.card > div:has(.background-bar) {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+.card > div:has(.background-bar) > i {
+    width: 16px;
+    font-size: 0.9rem;
+}
+.card > div:has(.background-bar):nth-of-type(1) > i { color: #e05c5c; }
+.card > div:has(.background-bar):nth-of-type(2) > i { color: #4a9d87; }
+.card > div:has(.background-bar):nth-of-type(3) > i { color: #9b72cf; }
+.background-bar {
+    flex: 1;
+    background-color: #1a2c30;
+    border-radius: 999px;
+    height: 8px;
+    overflow: hidden;
+}
+.up-background-bar {
+    height: 100%;
+    border-radius: 999px;
+    width: 100%;
+}
+.card > div:has(.background-bar):nth-of-type(1) .up-background-bar { background-color: #e05c5c; }
+.card > div:has(.background-bar):nth-of-type(2) .up-background-bar { background-color: #4a9d87; }
+.card > div:has(.background-bar):nth-of-type(3) .up-background-bar { background-color: #9b72cf; }
+.card > div:has(.background-bar) > p {
+    color: #677580;
+    font-size: 0.8rem;
+    min-width: 44px;
+    text-align: right;
+    margin: 0;
+}
+/* -------------------- STATS -------------------- */
+.card > div:has(.stats) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+.stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+}
+.stats p {
+    color: #677580;
+    font-size: 0.7rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.stats-number {
+    background-color: #1a2c30;
+    color: #c8d8dc;
+    border-radius: 6px;
+    padding: 0.3rem 0.4rem;
+    font-size: 0.95rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+/* -------------------- ARMAMENTO -------------------- */
+.card > p:nth-last-of-type(2) {
+    color: #677580;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0.25rem 0 0 0;
+}
+.card > p:last-of-type {
+    color: #c8d8dc;
+    font-size: 0.9rem;
+    margin: 0;
+}
+.card hr {
+    border: none;
+    border-top: 1px solid #1a2c30;
+    margin: 0.2rem 0;
+}
 /* -------------------- Adding -------------------- */
-
 .background-add {
     position: fixed;
     top: 0;
@@ -181,7 +280,6 @@ button{
     z-index: 999;
     display: none;
 }
-
 .add {
     background-color: #0d1821;
     border: 1px solid #1a2c30;
@@ -191,4 +289,52 @@ button{
     overflow-y: auto;
     padding: 1.5rem;
     position: relative;
+}
+.add h1 {
+    color: #4a9d87;
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem 0;
+}
+.add h2 {
+    color: #c8d8dc;
+    font-size: 1rem;
+    margin: 1rem 0 0.3rem 0;
+}
+.add hr {
+    border: none;
+    border-top: 1px solid #1a2c30;
+    margin: 0.3rem 0 1rem 0;
+}
+.add label {
+    color: #677580;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+.add input[type="text"],
+.add input[type="number"] {
+    background-color: #1a2c30;
+    border: 1px solid #243d41;
+    border-radius: 6px;
+    color: #c8d8dc;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0.3rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.add input:focus {
+    border-color: #4a9d87;
+}
+.box,
+.ocupação-box {
+    display: flex;
+    flex-direction: column;
+}
+.add form > button {
+    margin-top: 0.5rem;
+    width: 100%;
+    justify-content: center;
 }

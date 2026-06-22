@@ -136,6 +136,7 @@ function criarPersonagem() {
         renderizarPersonagem(p);
         fecharForm();
     }
+    alert("Inimigo criado com sucesso!")
 }
 
 function atualizarCard(card, p) {

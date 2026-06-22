@@ -163,6 +163,7 @@ function criarPersonagem() {
         renderizarPersonagem(p);
         fecharForm();
     }
+    alert("Personagem criado com sucesso!")
 }
 
 function atualizarCard(card, p) {
